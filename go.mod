@@ -15,6 +15,7 @@ require (
 	github.com/lib/pq v1.3.0
 	github.com/mattn/go-colorable v0.1.4
 	github.com/mattn/go-isatty v0.0.11
+	github.com/sirupsen/logrus v1.4.2 // indirect
 	github.com/valyala/bytebufferpool v1.0.0
 	github.com/valyala/fasttemplate v1.1.0
 	golang.org/x/crypto v0.0.0-20200221231518-2aa609cf4a9d

@@ -94,18 +94,6 @@
   version = "v0.3.0"
 
 [[projects]]
-  digest = "1:b424ab60bdff8b8899fa0b27c9b35083f2607fbbaa7b6430617c53ca4501d286"
-  name = "github.com/lib/pq"
-  packages = [
-    ".",
-    "oid",
-    "scram",
-  ]
-  pruneopts = ""
-  revision = "99274577be97ac9b1d95a2d61d566dc9b7cc6a54"
-  version = "v1.3.0"
-
-[[projects]]
   digest = "1:9b58ad18b38cf0d44b1d006fce319e45f200eafa406fe7f65fe0d0194b9f7a9f"
   name = "github.com/mattn/go-colorable"
   packages = ["."]
@@ -123,7 +111,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:5ba56c5801eadb64b6bb0d1a170ded7bbbc29365d21dce7af15677d03e038ec0"
+  digest = "1:e5d31e0284af9ad8c03d3f1922c31446d0a00b2fe8c7ed4d4320cc8ac34075ba"
   name = "github.com/salvo1404/go-echo-graphql"
   packages = [
     "db",
@@ -131,7 +119,7 @@
     "graphql/field",
   ]
   pruneopts = ""
-  revision = "df9a24099675f9e604047d68e1ef2cba3c82683d"
+  revision = "8931fb1b8edf9f4533579d7244ccef4434443ffa"
 
 [[projects]]
   digest = "1:857a9ecd5cb13379ecc8f798f6e6b6b574c98b9355657d91e068275f1120aaf7"
