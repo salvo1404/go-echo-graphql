@@ -55,7 +55,6 @@ func GetInventoryField(db *gorm.DB) *graphql.Field {
 
 			// var singleUser *user.User
 
-			fmt.Println("Api call to http://stormtrooper.app/api/v1/inventory/1...")
 			// response, err := http.Get("http://stormtrooper.app/api/v1/inventory/1")
 			response, err := http.Get("http://stormtrooper.app/api/v1/inventory?dealer_id&id&manu_year&source_ref_id&rego&over_cap&enhanced&eif_generate_xml&source_id&perf_rating&stock_no&sortBy&orderBy&with&status=Live&user_id&dateFrom&dateTo&dateType&paginate=10")
 			if err != nil {
