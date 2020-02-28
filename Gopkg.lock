@@ -111,7 +111,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:e5d31e0284af9ad8c03d3f1922c31446d0a00b2fe8c7ed4d4320cc8ac34075ba"
+  digest = "1:cd4e96cc62848c0922ab7ae01bcf3d7a71773976b6fffbf23a154a8e15299ee4"
   name = "github.com/salvo1404/go-echo-graphql"
   packages = [
     "db",
@@ -119,7 +119,7 @@
     "graphql/field",
   ]
   pruneopts = ""
-  revision = "8931fb1b8edf9f4533579d7244ccef4434443ffa"
+  revision = "6f03471da49c034ef84128fae3c50410ea50b131"
 
 [[projects]]
   digest = "1:857a9ecd5cb13379ecc8f798f6e6b6b574c98b9355657d91e068275f1120aaf7"

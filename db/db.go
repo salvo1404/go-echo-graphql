@@ -13,7 +13,7 @@ func Connect() *gorm.DB {
 		User:                 "go-echo-grapql",
 		Passwd:               "go-echo-grapql",
 		Net:                  "tcp",
-		Addr:                 "db:3308",
+		Addr:                 "db:3306",
 		DBName:               "go-echo-grapql",
 		AllowNativePasswords: true,
 		Params: map[string]string{
