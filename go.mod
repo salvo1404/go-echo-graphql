@@ -18,7 +18,7 @@ require (
 	github.com/sirupsen/logrus v1.4.2 // indirect
 	github.com/valyala/bytebufferpool v1.0.0
 	github.com/valyala/fasttemplate v1.1.0
-	golang.org/x/crypto v0.0.0-20200109152110-61a87790db17
+	golang.org/x/crypto v0.0.0-20200221231518-2aa609cf4a9d
 	golang.org/x/net v0.0.0-20191209160850-c0dbc17a3553
 	golang.org/x/net/http2/h2demo v0.0.0-20200226121028-0de0cce0169b // indirect
 	golang.org/x/sys v0.0.0-20200107162124-548cf772de50
