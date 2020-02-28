@@ -123,22 +123,12 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:5aa9a99e6271ad5f9903ff7b8feab2cd62819dfe15982518172c136a0fc5ba76"
-  name = "github.com/salvo1404/go-echo-api"
-  packages = [
-    "graphql/field",
-    "models",
-  ]
-  pruneopts = ""
-  revision = "4151c03faf193b768e11fc865bab617ccf0878d6"
-
-[[projects]]
-  branch = "master"
   digest = "1:5ba56c5801eadb64b6bb0d1a170ded7bbbc29365d21dce7af15677d03e038ec0"
   name = "github.com/salvo1404/go-echo-graphql"
   packages = [
     "db",
     "graphql",
+    "graphql/field",
   ]
   pruneopts = ""
   revision = "df9a24099675f9e604047d68e1ef2cba3c82683d"
@@ -222,9 +212,9 @@
     "github.com/jinzhu/gorm",
     "github.com/labstack/echo",
     "github.com/labstack/echo/middleware",
-    "github.com/salvo1404/go-echo-api/graphql/field",
     "github.com/salvo1404/go-echo-graphql/db",
     "github.com/salvo1404/go-echo-graphql/graphql",
+    "github.com/salvo1404/go-echo-graphql/graphql/field",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
