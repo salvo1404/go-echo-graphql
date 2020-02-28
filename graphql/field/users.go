@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"os/user"
 
 	"github.com/graphql-go/graphql"
 	"github.com/jinzhu/gorm"
@@ -13,7 +12,7 @@ import (
 
 var graphqlUser = graphql.NewObject(
 	graphql.ObjectConfig{
-		Name: "User",
+		Name: "Inventory",
 		Fields: graphql.Fields{
 			"id":        &graphql.Field{Type: graphql.ID},
 			"make":      &graphql.Field{Type: graphql.String},
@@ -22,31 +21,27 @@ var graphqlUser = graphql.NewObject(
 			"updatedAt": &graphql.Field{Type: graphql.String},
 			"deletedAt": &graphql.Field{Type: graphql.String},
 		},
-		Description: "Users data",
+		Description: "Inventory data",
 	},
 )
 
-type User struct {
+type Inventory struct {
 	// gorm.Model
-	ID    uint   `gorm:"primary_key" json:"id" db:"id"`
-	Name  string `json:"make" db:"name"`
-	Email string `json:"nvic" db:"email"`
+	ID   uint   `gorm:"primary_key" json:"id"`
+	Make string `json:"make"`
+	Nvic string `json:"nvic"`
 	// CreatedAt time.Time  `json:"created_at" db:"created_at"`
 	// UpdatedAt time.Time  `json:"updated_at" db:"updated_at"`
 	// DeletedAt *time.Time `json:"deleted_at" db:"deleted_at"`
 }
 
-func GetUsersField(db *gorm.DB) *graphql.Field {
+func GetInventoryField(db *gorm.DB) *graphql.Field {
 	return &graphql.Field{
 		Type: graphql.NewList(graphqlUser),
 		Resolve: func(p graphql.ResolveParams) (i interface{}, e error) {
-			var u []*user.User
+			var inv []*Inventory
 
 			// var singleUser *user.User
-
-			type Response struct {
-				Inventory []*user.User
-			}
 
 			fmt.Println("Api call to http://stormtrooper.app/api/v1/inventory/1...")
 			// response, err := http.Get("http://stormtrooper.app/api/v1/inventory/1")
@@ -64,7 +59,7 @@ func GetUsersField(db *gorm.DB) *graphql.Field {
 			var objmap map[string]*json.RawMessage
 			json.Unmarshal([]byte(string(data)), &objmap)
 
-			json.Unmarshal(*objmap["data"], &u)
+			json.Unmarshal(*objmap["data"], &inv)
 
 			// Working with 1
 			// payload := result["data"].(map[string]interface{})
@@ -78,8 +73,8 @@ func GetUsersField(db *gorm.DB) *graphql.Field {
 
 			// u = append(u, singleUser)
 
-			return u, nil
+			return inv, nil
 		},
-		Description: "user",
+		Description: "inventory",
 	}
 }

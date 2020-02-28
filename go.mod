@@ -1,6 +1,6 @@
 module github.com/salvo1404/go-echo-graphql
 
-go 1.13
+go 1.11
 
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible

@@ -8,7 +8,7 @@ import (
 
 func newQuery(db *gorm.DB) *graphql.Object {
 	fields := graphql.Fields{
-		"users": field.GetUsersField(db),
+		"users": field.GetInventoryField(db),
 	}
 
 	rootQuery := graphql.ObjectConfig{
