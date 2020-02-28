@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"time"
 
 	"github.com/graphql-go/graphql"
 	"github.com/jinzhu/gorm"
@@ -15,18 +14,18 @@ var graphqlUser = graphql.NewObject(
 	graphql.ObjectConfig{
 		Name: "Inventory",
 		Fields: graphql.Fields{
-			"id":        &graphql.Field{Type: graphql.ID},
-			"make":      &graphql.Field{Type: graphql.String},
-			"model":     &graphql.Field{Type: graphql.String},
-			"variant":   &graphql.Field{Type: graphql.String},
-			"series":    &graphql.Field{Type: graphql.String},
-			"url":       &graphql.Field{Type: graphql.String},
-			"url_cg":    &graphql.Field{Type: graphql.String},
-			"status":    &graphql.Field{Type: graphql.String},
-			"nvic":      &graphql.Field{Type: graphql.String},
-			"createdAt": &graphql.Field{Type: graphql.String},
-			"updatedAt": &graphql.Field{Type: graphql.String},
-			"deletedAt": &graphql.Field{Type: graphql.String},
+			"id":      &graphql.Field{Type: graphql.ID},
+			"make":    &graphql.Field{Type: graphql.String},
+			"model":   &graphql.Field{Type: graphql.String},
+			"variant": &graphql.Field{Type: graphql.String},
+			"series":  &graphql.Field{Type: graphql.String},
+			"url":     &graphql.Field{Type: graphql.String},
+			"url_cg":  &graphql.Field{Type: graphql.String},
+			"status":  &graphql.Field{Type: graphql.String},
+			"nvic":    &graphql.Field{Type: graphql.String},
+			// "createdAt": &graphql.Field{Type: graphql.String},
+			// "updatedAt": &graphql.Field{Type: graphql.String},
+			// "deletedAt": &graphql.Field{Type: graphql.String},
 		},
 		Description: "Inventory data",
 	},
@@ -34,18 +33,18 @@ var graphqlUser = graphql.NewObject(
 
 type Inventory struct {
 	// gorm.Model
-	ID        uint       `gorm:"primary_key" json:"id"`
-	Make      string     `json:"make"`
-	Nvic      string     `json:"nvic"`
-	Model     string     `json:"model"`
-	Variant   string     `json:"variant"`
-	Series    string     `json:"series"`
-	Url       string     `json:"url"`
-	UrlCg     string     `json:"url_cg"`
-	status    string     `json:"nvic"`
-	CreatedAt time.Time  `json:"created_at"`
-	UpdatedAt time.Time  `json:"updated_at"`
-	DeletedAt *time.Time `json:"deleted_at"`
+	ID      uint   `gorm:"primary_key" json:"id"`
+	Make    string `json:"make"`
+	Nvic    string `json:"nvic"`
+	Model   string `json:"model"`
+	Variant string `json:"variant"`
+	Series  string `json:"series"`
+	Url     string `json:"url"`
+	UrlCg   string `json:"url_cg"`
+	status  string `json:"nvic"`
+	// CreatedAt time.Time  `json:"created_at"`
+	// UpdatedAt time.Time  `json:"updated_at"`
+	// DeletedAt *time.Time `json:"deleted_at"`
 }
 
 func GetInventoryField(db *gorm.DB) *graphql.Field {
