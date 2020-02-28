@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -21,6 +22,7 @@ func main() {
 	// 		Format: "method=${method}, uri=${uri}, status=${status}\n",
 	// 	}))
 
+	fmt.Println("ciao")
 	// Database
 	d := db.Connect()
 	d.LogMode(true)
